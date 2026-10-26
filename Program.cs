@@ -201,20 +201,6 @@ namespace UserActivityCore
                         Console.WriteLine("Log entry added for file access: " + logLine);
                         lastBookmark = record.Bookmark;
                         SaveBookmark(lastBookmark);
-
-                        /* if (record.RecordId.HasValue && record.RecordId.Value > lastProcessedRecordId)
-                         {
-                             string fullMessage = record.FormatDescription();
-                             string accountName = ExtractField(fullMessage, "Account Name:");
-
-                             string logLine = record.TimeCreated + " | User: " + accountName + " | Event: File opened";
-                             File.AppendAllText(@"C:\log-open-log-file.txt", logLine + Environment.NewLine);
-
-                             lastProcessedRecordId = record.RecordId.Value;
-                             //Console.WriteLine("New event: ID=" + record.Id + " Time=" + record.TimeCreated + " RecordId=" + record.RecordId);
-
-
-                         }*/
                     }
                 }
             }
